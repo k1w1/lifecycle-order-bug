@@ -26,7 +26,12 @@ export class MyComponent {
     return format(this.first, this.middle, this.last);
   }
 
+  connectedCallback() {
+    console.log('connectedCallback');
+  }
+
   render() {
+    console.log('render');
     return <div>Hello, World! I'm {this.getText()}</div>;
   }
 }
